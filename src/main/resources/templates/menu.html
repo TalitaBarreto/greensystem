@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+    <h1>MENU</h1>
+    <nav>
+        <ul style="list-style: none;">
+            <li th:each="item : ${menuItems}">
+                <br/><a th:href="@{${item.url}}" th:text="${item.name}"></a>
+            </li>            
+        </ul>        
+    </nav>
+   
+</body>
+</html>

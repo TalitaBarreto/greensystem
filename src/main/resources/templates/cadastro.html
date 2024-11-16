@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Empresa</title>
+</head>
+<body>
+    <h1>Cadastro de Empresa</h1>
+
+    <!-- Exibe a mensagem de erro se o login já estiver em uso -->
+    <div th:if="${error}" style="color: red;">
+        <p th:text="${error}"></p>
+    </div>
+
+    <form action="/cadastro" method="post">
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" name="cnpj" required><br>
+    
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+    
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" required><br>
+    
+        <label for="telefone1">Telefone 1:</label>
+        <input type="text" id="telefone1" name="telefone1" required><br>
+    
+        <label for="telefone2">Telefone 2:</label>
+        <input type="text" id="telefone2" name="telefone2"><br>
+    
+        <label for="telefone3">Telefone 3:</label>
+        <input type="text" id="telefone3" name="telefone3"><br>
+    
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" required><br>
+    
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required><br>
+    
+        <label for="senhaConfirmacao">Confirmar Senha:</label>
+        <input type="password" id="senhaConfirmacao" name="senhaConfirmacao" required><br>
+    
+        <button type="submit">Cadastrar</button>
+    </form>
+    
+</body>
+</html>
+
+
